@@ -17,9 +17,9 @@ import "../styles/globals.css";
 import CursorLoader from "@/components/CursorLoader";
 
 const NAV_ITEMS = [
-  { label: "Daily", route: "/?tab=Daily", tabId: "Daily", icon: LuCalendar },
-  { label: "Combined", route: "/?tab=Combined", tabId: "Combined", icon: LuLayers },
-  { label: "Morning Meeting", route: "/morningMeeting", tabId: "Meeting", icon: LuCoffee },
+  { label: "Daily", route: "", tabId: "Daily", icon: LuCalendar },
+  { label: "Combined", route: "", tabId: "Combined", icon: LuLayers },
+  { label: "Morning Meeting", route: "", tabId: "Meeting", icon: LuCoffee },
 ];
 
 // SIDEBAR COMPONENT
@@ -58,7 +58,7 @@ function Sidebar({ router, theme, toggleTheme, onLogout }) {
               isDark ? "text-purple-300/90" : "text-purple-500/90"
             }`}
           >
-            RigMind
+            Software name
           </span>
         </div>
       </div>
@@ -296,13 +296,6 @@ export default function MyApp({ Component, pageProps }) {
         isDark ? "bg-black text-white" : "bg-[#F7F8FA] text-[#101828]"
       }`}
     >
-      {/* Ambient Glow Orbs */}
-      {isDark && (
-        <>
-          <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-violet-600/[0.08] rounded-full blur-[120px] pointer-events-none" />
-        </>
-      )}
       <Sidebar
         router={router}
         theme={theme}
